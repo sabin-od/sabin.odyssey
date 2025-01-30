@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabin Bhandari - My Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        overflow-y: auto;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        transform: scale(1.1); /* Parallax effect */
+        transition: transform 0.5s ease;
+      }
+      .container {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+        max-width: 1200px;
+        width: 90%;
+        margin-top: 20px;
+        backdrop-filter: blur(10px); /* Glassmorphism effect */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      h1 { 
+        font-size: 2.5rem; 
+        margin-bottom: 20px; 
+        font-weight: 600;
+        background: linear-gradient(90deg, #3498db, #8e44ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+      }
+      .service {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 15px;
+        transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .service:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      .service img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+      }
+      .service-info {
+        text-align: center;
+      }
+      .service-info span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+      .service-info p {
+        font-size: 1rem;
+        color: #dcdcdc;
+        line-height: 1.6;
+      }
+      a {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 12px 30px;
+        background: linear-gradient(90deg, #3498db, #8e44ad);
+        text-decoration: none;
+        color: white;
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-weight: 600;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      a:hover { 
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      /* Media Queries */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .service-info span {
+          font-size: 1.2rem;
+        }
+        .service-info p {
+          font-size: 0.9rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .container {
+          padding: 20px;
+        }
+        .service {
+          padding: 20px;
+        }
+        .service-info span {
+          font-size: 1.1rem;
+        }
+        .service-info p {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop class="background-video" id="background-video">
+      <source src="https://videos.pexels.com/video-files/5818973/5818973-uhd_2560_1440_24fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+      <h1>My Services</h1>
+      <div class="services">
+        <div class="service">
+          <img src="https://t4.ftcdn.net/jpg/02/56/60/77/240_F_256607704_MlVHLkv0m5xfVuj0a9LLcbsUUcJSBqgO.jpg" alt="Website Designing">
+          <div class="service-info">
+            <span>Website Designing</span>
+            <p>I specialize in creating visually appealing, user-friendly websites that work seamlessly across all devices. Whether you need a simple portfolio site or a sophisticated e-commerce platform, I provide responsive and performance-optimized web design solutions tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="service">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/9948d9176662273.Y3JvcCwzMTcwLDI0ODAsMTY0LDA.jpg" alt="2D Animation">
+          <div class="service-info">
+            <span>2D Animation</span>
+            <p>From educational videos to product animations, I bring your ideas to life with dynamic 2D animation. My animations are crafted to tell compelling stories and engage your audience, whether for marketing, branding, or entertainment purposes.</p>
+          </div>
+        </div>
+        <div class="service">
+          <img src="https://static.vecteezy.com/system/resources/previews/010/952/951/non_2x/movie-film-editor-logo-design-video-editing-logo-concept-vector.jpg" alt="Video Editing">
+          <div class="service-info">
+            <span>Video Editing</span>
+            <p>I offer professional video editing services that turn raw footage into polished, cinematic-quality videos. I work with various styles and genres, ensuring that your videos meet your brand's objectives and stand out on any platform.</p>
+          </div>
+        </div>
+      </div>
+      <a href="index.html" aria-label="Back to Home">Back to Home</a>
+    </div>
+
+    <script>
+      // Ensure the video is preloaded to avoid white flash
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('background-video');
+        const body = document.querySelector('body');
+        video.play();
+        body.style.opacity = 1; // Show content after the page has loaded
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+          video.style.transform = `scale(${1.1 + scrollY * 0.0005})`;
+        });
+      });
+    </script>
+  </body>
+</html>
